@@ -1,51 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My E-Commerce Website</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>منتج تجريبي</title>
+  <!-- Meta Tags لإظهار السعر -->
+  <meta property="product:price:amount" content="299.99">
+  <meta property="og:price:amount" content="299.99">
+  <meta name="twitter:data1" content="299.99">
+  
+  <!-- JSON-LD لإظهار بيانات المنتج والسعر -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "منتج تجريبي",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "SAR",
+      "price": "299.99"
+    }
+  }
+  </script>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .price {
+      font-size: 2em;
+      color: red;
+      margin: 10px 0;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My E-Commerce Website</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="product1.html">Elegant Watch</a>
-      <a href="product2.html">Leather Wallet</a>
-      <a href="product3.html">Wireless Earbuds</a>
-      <a href="product4.html">Stylish Sunglasses</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="products">
-      <div class="product">
-        <img src="https://via.placeholder.com/300x200" alt="Elegant Watch">
-        <h2><a href="product1.html">Elegant Watch</a></h2>
-        <p>Price: 250 ريال</p>
-      </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/300x200" alt="Leather Wallet">
-        <h2><a href="product2.html">Leather Wallet</a></h2>
-        <p>Price: 150 ريال</p>
-      </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/300x200" alt="Wireless Earbuds">
-        <h2><a href="product3.html">Wireless Earbuds</a></h2>
-        <p>Price: 350 ريال</p>
-      </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/300x200" alt="Stylish Sunglasses">
-        <h2><a href="product4.html">Stylish Sunglasses</a></h2>
-        <p>Price: 100 ريال</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 My E-Commerce Website</p>
-  </footer>
+  <h1>منتج تجريبي</h1>
+  <p class="price">SAR 299.99</p>
+  <div>
+    السعر: <span class="price">299.99 ريال</span>
+  </div>
+  <p>هذا منتج تجريبي لاختبار استخراج السعر في بوت تتبع الأسعار.</p>
 </body>
 </html>
-
